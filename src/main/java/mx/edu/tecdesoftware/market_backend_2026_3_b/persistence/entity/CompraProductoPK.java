@@ -1,4 +1,4 @@
-package mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entities;
+package mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

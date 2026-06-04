@@ -1,7 +1,7 @@
 package mx.edu.tecdesoftware.market_backend_2026_3_b.persistence;
 
 import mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.crud.ProductoCrudRepository;
-import mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entities.Producto;
+import mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entity.Producto;
 
 import java.util.List;
 import java.util.Optional;
@@ -38,5 +38,13 @@ public class ProductoRepository {
    // Eliminar un producto por ID
     public void deleteProductoById(int idProducto){
         productocrudrepository.deleteById(idProducto);
+    }
+
+    public ProductoCrudRepository getProductocrudrepository() {
+        return productocrudrepository;
+    }
+
+    public void setProductocrudrepository(ProductoCrudRepository productocrudrepository) {
+        this.productocrudrepository = productocrudrepository;
     }
 }

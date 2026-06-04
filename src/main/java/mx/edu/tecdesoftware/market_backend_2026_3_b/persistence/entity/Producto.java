@@ -1,4 +1,4 @@
-package mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entities;
+package mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entity;
 
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
@@ -92,6 +92,14 @@ public class Producto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
 
