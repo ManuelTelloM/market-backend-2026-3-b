@@ -2,12 +2,25 @@ package mx.edu.tecdesoftware.market_backend_2026_3_b.persistence;
 
 import mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.crud.ProductoCrudRepository;
 import mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.entity.Producto;
+import mx.edu.tecdesoftware.market_backend_2026_3_b.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ProductoRepository {
+@Repository
+//Le da acceso a la BD
+public class ProductoRepository implements ProductRepository {
+
     private ProductoCrudRepository productocrudrepository;
+
+    @Autowired
+    private ProductoCrudRepository productoCrudRepository;
+
+
+    @Autowired
+    private ProductMapper productMapper;
 
     //SELECT * FROM productos
     public List<Producto> getAll(){
